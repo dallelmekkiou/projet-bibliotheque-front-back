@@ -1,5 +1,16 @@
 <div class="container-fluid" >
 <div class="card mt-4 w-50 text-center" >
+<!-- ******************messages ************************************************* -->
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert" *ngIf="messageConnexion">
+            <strong></strong> Connexion réussie !
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert" *ngIf="messageErreur">
+            <strong>Oups!</strong> Connexion echouée !
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  
+<!--******************formulaire de connexion************************************* -->
  <form (ngSubmit)="methodeConnexion(formulaire)" #formulaire="ngForm">
     <div class="mb-3">
       <label for="nom" class="form-label mt-4">Nom utilisateur</label>
@@ -15,17 +26,5 @@
     </div> -->
     <button type="submit" class="btn btn-outline-dark">Valider</button>
   </form>
-  <section *ngIf="messageConnexion">
-    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
-        <strong></strong> Connexion réussie !
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-</section>
-<section *ngIf="messageErreur">
-    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
-        <strong>Oups!</strong> Connexion echouée !
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-</section>
 </div>
 </div>
