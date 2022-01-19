@@ -1,0 +1,56 @@
+html, body{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+    background-color: linen;
+    font-family:Palatino, URW Palladio L, serif ;
+
+}
+#header{
+    display: block;
+    background-size: cover;
+    background-image: url(../assets/images/fond.jpg);
+    background-repeat: no-repeat;
+    height:800px;
+    
+}
+#header .navbar{
+    font-family:Palatino, URW Palladio L, serif ;
+    font-size: 150%;
+}
+#header .banner{
+    text-justify: center;
+    font-family:Palatino, URW Palladio L, serif ;
+    font-size: 150%;
+    margin-top: 33%;
+    line-height : 1.0;
+}
+.banner h1{
+    font-family:Palatino, URW Palladio L, serif ;
+    text-justify: center;
+    text-align:center;
+    font-size: 60px;
+    line-height : 1.0;
+ }
+.banner p{
+   font-family:Palatino, URW Palladio L, serif ;
+   text-justify: center;
+   text-align:center;
+   font-size: 30px;
+
+}
+html {
+    box-sizing: border-box;
+}
+.banner{
+    margin-top: 10%;
+    margin-left:10%;
+    margin-right:10%;
+}
+.main{
+    margin-left: 20%;
+    margin-right: 10%;
+    background-color: inherit;
+}
+

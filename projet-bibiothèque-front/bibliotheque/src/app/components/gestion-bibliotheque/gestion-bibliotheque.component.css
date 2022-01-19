@@ -1,0 +1,52 @@
+.container{
+    background-color: inherit;
+    font-family:Palatino, URW Palladio L, serif ;
+}
+.button{
+    font-family:Palatino, URW Palladio L, serif ;
+    background-color: inherit;
+
+}
+.btn{
+    font-family:Palatino, URW Palladio L, serif ;
+    background-color: inherit;
+
+}
+
+.ng-container{
+    font-family:Palatino, URW Palladio L, serif ;
+}
+.row{
+    background-color: inherit;
+    font-family:Palatino, URW Palladio L, serif ;
+}
+.card{
+    background-color: inherit;
+    font-family:Palatino, URW Palladio L, serif ;
+}
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+    font-family:Palatino, URW Palladio L, serif ;
+}
+h1{
+    font-family:Palatino, URW Palladio L, serif ;
+
+}
+h3{
+    font-family:Palatino, URW Palladio L, serif ;
+
+}
+.green{
+    color:green
+}
+.red{
+    color:red
+}
+.card-horizontal img{
+    transition:0.3s ease-in-out;
+}
+.card-horizontal img:hover{
+    transition:0.3s ease-in-out;
+    transform:scale(1.1);
+}

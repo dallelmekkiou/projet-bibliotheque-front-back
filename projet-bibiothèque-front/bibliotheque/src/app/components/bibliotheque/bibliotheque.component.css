@@ -1,0 +1,26 @@
+.container{
+    background-color: inherit;
+    font-family:Palatino, URW Palladio L, serif ;
+
+}
+.row{
+    background-color: inherit;
+    font-family:Palatino, URW Palladio L, serif ;
+
+}
+.card{
+    background-color: inherit;
+    font-family:Palatino, URW Palladio L, serif ;
+
+}
+h2{
+    font-family:Palatino, URW Palladio L, serif ;
+
+}
+.card img{
+    transition:0.3s ease-in-out;
+}
+.card img:hover{
+    transition:0.3s ease-in-out;
+    transform:scale(1.1);
+}

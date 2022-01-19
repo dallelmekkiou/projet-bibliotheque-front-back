@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+    background-color: linen;
+}
+#header{
+    display: block;
+    background-size: cover;
+    background-image: url(assets/images/fond.jpg);
+    background-repeat: no-repeat;
+    height:800px;
+    
+}
+#header .navbar{
+    font-family:Palatino, URW Palladio L, serif ;
+    font-size: 150%;
+}
+#header .banner{
+    text-justify: center;
+    font-family:Palatino, URW Palladio L, serif ;
+    font-size: 150%;
+    margin-top: 33%;
+}
+.banner p{
+   text-justify: center;
+   text-align:center;
+}
+html {
+    box-sizing: border-box;
+}
+.banner{
+    margin-top: 10%;
+    margin-left:10%;
+    margin-right:10%;
+}
+.main{
+    margin-left: 20%;
+    margin-right: 10%;
+    background-color: inherit;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
