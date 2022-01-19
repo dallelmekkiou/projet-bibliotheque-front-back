@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class AuthentificationService {
   public users=[
-    {prenom:'dallel',motPasse:'dddd'},
-    {prenom:'yesmine',motPasse:'yyyy'},
-    {prenom:'mohamed',motPasse:'mmmm'},
-    {prenom:'anis',motPasse:'aaaa'}
+    {nom:'dallel',motPasse:'dddd'},
+    {nom:'yesmine',motPasse:'yyyy'},
+    {nom:'mohamed',motPasse:'mmmm'},
+    {nom:'anis',motPasse:'aaaa'}
 
   ];
   constructor() { }

@@ -1,1 +1,17 @@
-<p>authentification works!</p>
+<div class="container-fluid mt-2" style="size:50%;">
+ <form (ngSubmit)="connexion(formulaire)" #formulaire="ngForm">
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom utilisateur</label>
+      <input type="text" class="form-control" name="nom" id="" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="motPasse" class="form-label">Mot de passe</label>
+      <input type="password" class="form-control" name="motPasse" id="" ngModel>
+    </div>
+    <!-- <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div> -->
+    <button type="submit" class="btn btn-outline-dark">Valider</button>
+  </form>
+</div>
