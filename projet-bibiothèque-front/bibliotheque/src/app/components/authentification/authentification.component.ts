@@ -16,7 +16,8 @@ export class AuthentificationComponent implements OnInit {
   connexion(formulaire:any){
     let data=formulaire.value;
     console.log(data.nom)
-    console.log(data.nom)
+    console.log(data.motPasse)
+    this.authentificationService.verifAuthentification(data.nom,data.motPasse);
     
 
   }
