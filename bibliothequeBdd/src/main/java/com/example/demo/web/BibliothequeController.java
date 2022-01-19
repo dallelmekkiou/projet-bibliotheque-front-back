@@ -68,7 +68,7 @@ public class BibliothequeController {
                         case "image": b.setImage((String) value); break;
                         case "adresse": b.setAdresse((String) value); break;
                         case "tel": b.setTel((String) value); break;
-
+                        
                     }
                 });
 		
