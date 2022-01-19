@@ -5,25 +5,27 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthentificationService {
-  public users=[
+  public utilisateurs=[
     {nom:'dallel',motPasse:'dddd'},
     {nom:'yesmine',motPasse:'yyyy'},
     {nom:'mohamed',motPasse:'mmmm'},
     {nom:'anis',motPasse:'aaaa'}
-
   ];
-  user:any;
-  valide=false;
+  utilisateurConnecte:any;
+  estConnecte=false;
   constructor() { }
 
- verifAuthentification(nom:any,motPasse:any){
-   for (this.user in this.users){
-     if(this.user.nom==nom){
-       if(this.user.motPasse==motPasse){this.valide=true}else{return "Mot de passe incorrect !"}
-     }else{ return " Nom incorrect !"}
-   }
-   return this.valide;
+ connexion(nom:any,motPasse:any){
+  this.utilisateurs.forEach((u)=>{
+    if(u.nom==nom && u.motPasse==motPasse){
+      this.estConnecte=true;
+      // this.utilisateurConnecte=u.nom
+      // localStorage.setItem('estConnecte',String(this.estConnecte));
+      // localStorage.setItem('utilisateurConnecte',this.utilisateurConnecte);
 
+    }
+  });
+  return this.estConnecte
  }
 
 }

@@ -9,16 +9,20 @@ import { AuthentificationService } from 'src/app/services/authentification.servi
 export class AuthentificationComponent implements OnInit {
 
   constructor(private authentificationService:AuthentificationService) { }
+ 
+  messageConnexion=false;
+  messageErreur=false;
 
   ngOnInit(): void {
   }
 
-  connexion(formulaire:any){
-    let data=formulaire.value;
-    console.log(data.nom)
-    console.log(data.motPasse)
-    this.authentificationService.verifAuthentification(data.nom,data.motPasse);
-    
+  methodeConnexion(formulaire:any){
+    let utilisateur=formulaire.value;
+    console.log(utilisateur.nom)
+    console.log(utilisateur.motPasse)
+    let utilisateurValide=this.authentificationService.connexion(utilisateur.nom,utilisateur.motPasse);
+    if (utilisateurValide){ console.log('connexion réussie'); this.messageConnexion=true }
+    else { console.log('erreur de connexion'); this.messageErreur=true}
 
   }
 

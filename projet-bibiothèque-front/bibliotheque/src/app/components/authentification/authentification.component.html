@@ -1,5 +1,5 @@
 <div class="container-fluid mt-2" style="size:50%;">
- <form (ngSubmit)="connexion(formulaire)" #formulaire="ngForm">
+ <form (ngSubmit)="methodeConnexion(formulaire)" #formulaire="ngForm">
     <div class="mb-3">
       <label for="nom" class="form-label">Nom utilisateur</label>
       <input type="text" class="form-control" name="nom" id="" ngModel>
@@ -14,4 +14,16 @@
     </div> -->
     <button type="submit" class="btn btn-outline-dark">Valider</button>
   </form>
+  <section *ngIf="messageConnexion">
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        <strong></strong> Connexion réussie !
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</section>
+<section *ngIf="messageErreur">
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        <strong>Oups!</strong> Connexion echouée !
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</section>
 </div>
