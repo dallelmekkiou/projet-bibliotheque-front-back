@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthentificationService } from 'src/app/services/authentification.service';
 
 @Component({
   selector: 'app-authentification',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthentificationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authentificationService:AuthentificationService) { }
 
   ngOnInit(): void {
+  }
+
+  connexion(formulaire:any){
+    let data=formulaire.value;
+    console.log(data.nom)
+    console.log(data.nom)
+    
+
   }
 
 }
