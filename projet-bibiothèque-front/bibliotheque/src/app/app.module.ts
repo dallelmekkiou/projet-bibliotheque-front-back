@@ -11,6 +11,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LivreComponent } from './components/livre/livre.component';
+import { AuthentificationComponent } from './components/authentification/authentification.component';
 
 
 
@@ -20,7 +21,8 @@ import { LivreComponent } from './components/livre/livre.component';
     BibliothequeComponent,
     GestionBibliothequeComponent,
     HomeComponent,
-    LivreComponent
+    LivreComponent,
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,
