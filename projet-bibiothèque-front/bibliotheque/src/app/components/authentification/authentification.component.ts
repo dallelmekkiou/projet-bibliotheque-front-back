@@ -15,7 +15,7 @@ export class AuthentificationComponent implements OnInit {
   utilisateurConnecte:any;
   estConnecte=false;
   role:any;
-
+  admin=false;
   ngOnInit(): void {
   }
 
@@ -29,13 +29,15 @@ export class AuthentificationComponent implements OnInit {
    let utilisateurs=this.authentificationService.connexion();//recuperer le tableau des utilisateurs du service
    utilisateurs.forEach((u)=>{
         if(u.nom==utilisateur.nom && u.motPasse==utilisateur.motPasse){
-          this.estConnecte=true;
           this.utilisateurConnecte=u.nom
           this.role=u.role
+          this.estConnecte=true
           localStorage.setItem('estConnecte',String(this.estConnecte));
           localStorage.setItem('utilisateurConnecte',this.utilisateurConnecte);
-          this.authentificationService.logged( this.utilisateurConnecte);
-        }
+          this.authentificationService.loggedIn( u);
+         if (this.role=='admin'){
+           this.authentificationService.isAdmin();}
+         }
       });
       if (this.estConnecte){ 
         console.log('connexion réussie'); 

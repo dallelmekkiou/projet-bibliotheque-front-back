@@ -12,8 +12,9 @@ export class AuthentificationService {
     {nom:'anis',motPasse:'aaaa',role:'user'}
   ];
   utilisateurConnecte:any;
-  // estConnecte=false;
-  // role:any;
+  nomUtilisateurConnecte:any;
+  admin=false;
+  estConnecte=false;
 
   constructor() { }
 
@@ -32,8 +33,15 @@ export class AuthentificationService {
 return this.utilisateurs
  }
 
- logged( utilisateurConnecte:any){
+ loggedIn( utilisateurConnecte:any){
    this.utilisateurConnecte=utilisateurConnecte
+   this.nomUtilisateurConnecte=utilisateurConnecte.nom 
+   this.estConnecte=true;
+ }
+
+ isAdmin(){
+   this.admin=true;
+   return this.admin;
  }
 
 }
