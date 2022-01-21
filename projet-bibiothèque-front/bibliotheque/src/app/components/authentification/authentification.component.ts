@@ -20,12 +20,7 @@ export class AuthentificationComponent implements OnInit {
   }
 
   connexion(formulaire:any){
-    let utilisateur=formulaire.value;
-    console.log(utilisateur.nom)
-    console.log(utilisateur.motPasse)
-    // let utilisateurValide=this.authentificationService.connexion(utilisateur.nom,utilisateur.motPasse);    
-    // if (utilisateurValide){ console.log('connexion réussie'); this.messageConnexion=true }
-    // else { console.log('erreur de connexion'); this.messageErreur=true}
+    let utilisateur=formulaire.value;  
    let utilisateurs=this.authentificationService.login();//recuperer le tableau des utilisateurs du service
    utilisateurs.forEach((u)=>{
         if(u.nom==utilisateur.nom && u.motPasse==utilisateur.motPasse){

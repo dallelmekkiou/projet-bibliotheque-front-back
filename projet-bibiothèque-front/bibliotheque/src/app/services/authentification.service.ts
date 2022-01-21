@@ -14,6 +14,7 @@ export class AuthentificationService {
     {nom:'mohamed',motPasse:'mmmm',role:'admin'},
     {nom:'anis',motPasse:'aaaa',role:'user'}
   ];
+  
   utilisateurConnecte:any;
   nomUtilisateurConnecte:any;
   admin=false;
@@ -23,7 +24,6 @@ export class AuthentificationService {
   constructor(private router:Router,private http:HttpClient) { 
 
   }  
-
 
  login(){
    return this.utilisateurs

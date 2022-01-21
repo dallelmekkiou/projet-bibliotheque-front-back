@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -147,26 +148,19 @@ public class BibliothequeBddApplication implements CommandLineRunner{
 		 * System.out.println("titre :"+l.getTitre());
 		 * System.out.println("description :"+l.getDescription()); });
 		 */
+		
 		/*
-		 * Bibliotheque b =new Bibliotheque(null, "", "", "", "", "", null);
-		 * Bibliotheque b1 =new Bibliotheque(null, "", "", "", "", "", null);
-		 * Bibliotheque b2 =new Bibliotheque(null, "", "", "", "", "", null);
-		 * Bibliotheque b3 =new Bibliotheque(null, "", "", "", "", "", null);
+		 * List<Bibliotheque> bibliotheques = new ArrayList<>(); Collection<Livre>
+		 * livres = new ArrayList<>(); Random random=new Random(); //création des
+		 * bibliotheques for (int i = 0; i < 4; i++) { Bibliotheque b = new
+		 * Bibliotheque(null,RandomString.make(100),RandomString.make(100),RandomString.
+		 * make(100),RandomString.make(100),RandomString.make(100),random.nextInt(50),
+		 * livres); bibliotheques.add(b); bRepo.save(b); } //création des livres
+		 * bRepo.findAll().forEach(b->{ for (int i = 0; i < 10; i++) { Livre l = new
+		 * Livre(null, RandomString.make(50), RandomString.make(50), random.nextInt(50),
+		 * b); livres.add(l); lRepo.save(l); } });
 		 */
-
-		/*
-		 * Livre l1= lRepo.save(new Livre(null,"t","t",null)); Livre l2= lRepo.save(new
-		 * Livre(null,"p","p",null)); Livre l3= lRepo.save(new
-		 * Livre(null,"m","m",null)); Livre l4= lRepo.save(new
-		 * Livre(null,"m","m",null)); Livre l5= lRepo.save(new
-		 * Livre(null,"m","m",null)); Collection<Livre> livres; livres=new
-		 * ArrayList<Livre>(); livres.add(l1); livres.add(l2); livres.add(l3);
-		 * livres.add(l4); livres.add(l5); bRepo.findAll().forEach(b->{
-		 * System.out.println(b); b.setLivres(livres); bRepo.save(b); });
-		 */
-		  Random random = new Random(); bRepo.findAll().forEach(b->{
-		  b.setNbrAdherent(random.nextInt(100));
-		  });
+		  
 		 		
 }
 }

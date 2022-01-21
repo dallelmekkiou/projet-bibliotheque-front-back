@@ -1,35 +1,37 @@
 <body>
 
     <div class="container-fluid">
-
-        <button class="btn btn-outline-dark mt-4" type="button" (click)="afficherFormAjout()">Nouvelle
-            bibliothèque</button>
         <!--*************** section recherche****************************************************** -->
-        <div class="row g-0 text text-align">
-            <div class="col-4 md-8 col-lg-4 sm-* mt-4 border border-light">
+        
+        <div class="card-search mt-4  text-center border-light" >
+            <div class=" md-8 sm-* mt-4 ">
               
                 <input class="form-control sm-* mt-4 " type="text" name="search" placeholder="chercher une bibliothèque"
-                    size="30" style="max-width:45%;" [(ngModel)]="recherche"
+                    style="max-width:60%;" [(ngModel)]="recherche"
                     (ngModelChange)="chercherBibliothequeMotCle()">
 
                 <form (ngSubmit)="chercherBibliothequeNbrAdherent(formulaire)" #formulaire="ngForm">
-                    <input class="form-control sm-* mt-4 " type="text" name="min"
-                        placeholder="entrez le nombre minimum des adhérents" size="30" style="max-width:45%;" ngModel>
+                    <input class="form-control sm-* mt-4" type="text" name="min"
+                        placeholder="entrez le nombre minimum des adhérents" style="max-width:60%;" ngModel>
                     <input class="form-control sm-* mt-4 " type="text" name="max"
-                        placeholder="entrez le nombre maximum des adhérents" size="30" style="max-width:45%;" ngModel>
-                    <button type="submit" class="btn btn-outline-dark mt-4">Chercher</button>
+                        placeholder="entrez le nombre maximum des adhérents" style="max-width:60%;" ngModel>
+                    <button type="submit" class="btn btn-outline-dark mt-1">Chercher</button>
                 </form>
-                <section *ngIf="message">
-                    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                <section *ngIf="message" style="max-width:60%;">
+                    <div class="alert alert-secondary alert-dismissible fade show" role="alert" >
                         <strong>Oups!</strong> Aucune bibliotheque ne correspond à votre recherche!
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <button type="button" class="btn-close justify-content-center" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 </section>
              
             </div>
         </div>
+        <!-- ********************************affichage bibliotheques************************** -->
+        
         <div class="row row g-0 justify-content-start text text-align">
-            <div class="col-md-8 col-lg-8 sm-* mt-4 border border-light">
+            <div class="col-md-8 col-lg-8 sm-* mt-1 border border-light">
+                <button class="btn btn-outline-dark mt-4" type="button" (click)="afficherFormAjout()">Nouvelle
+                    bibliothèque</button>
                 <div class="card-horizontal mt-4 border-light" [ngClass]="{'bg-light': bibliotheque.id==id}"
                     *ngFor="let bibliotheque of listeBibliotheques._embedded.bibliotheques">
 

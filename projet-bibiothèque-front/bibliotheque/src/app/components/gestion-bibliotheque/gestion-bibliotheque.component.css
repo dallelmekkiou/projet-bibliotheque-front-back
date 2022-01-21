@@ -50,3 +50,8 @@ h3{
     transition:0.3s ease-in-out;
     transform:scale(1.1);
 }
+.card-search{
+    background-color: inherit;
+    font-family:Palatino, URW Palladio L, serif ;
+    margin-left: 30%;
+}
