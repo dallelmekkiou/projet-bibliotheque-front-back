@@ -1,5 +1,6 @@
 import { analytics } from '@angular-devkit/core';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,21 +17,10 @@ export class AuthentificationService {
   admin=false;
   estConnecte=false;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
- connexion(){
-//   this.utilisateurs.forEach((u)=>{
-//     if(u.nom==nom && u.motPasse==motPasse){
-//       this.estConnecte=true;
-//       this.utilisateurConnecte=u.nom
-//       this.role=u.role
-//       localStorage.setItem('estConnecte',String(this.estConnecte));
-//       localStorage.setItem('utilisateurConnecte',this.utilisateurConnecte);
-      
-//     }
-//   });
-//   return this.estConnecte
-return this.utilisateurs
+ login(){
+   return this.utilisateurs
  }
 
  loggedIn( utilisateurConnecte:any){
@@ -41,7 +31,17 @@ return this.utilisateurs
 
  isAdmin(){
    this.admin=true;
+   this.router.navigate(['gestionBibliotheque'])
    return this.admin;
+   
+ }
+
+ logOut(){
+  this.estConnecte=false;
+  this.nomUtilisateurConnecte=undefined;
+  this.utilisateurConnecte=undefined;
+  localStorage.removeItem('estConnecte');
+  localStorage.removeItem('utilisateurConnecte');
  }
 
 }

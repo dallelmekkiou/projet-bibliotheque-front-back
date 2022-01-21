@@ -19,14 +19,14 @@ export class AuthentificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  methodeConnexion(formulaire:any){
+  connexion(formulaire:any){
     let utilisateur=formulaire.value;
     console.log(utilisateur.nom)
     console.log(utilisateur.motPasse)
     // let utilisateurValide=this.authentificationService.connexion(utilisateur.nom,utilisateur.motPasse);    
     // if (utilisateurValide){ console.log('connexion réussie'); this.messageConnexion=true }
     // else { console.log('erreur de connexion'); this.messageErreur=true}
-   let utilisateurs=this.authentificationService.connexion();//recuperer le tableau des utilisateurs du service
+   let utilisateurs=this.authentificationService.login();//recuperer le tableau des utilisateurs du service
    utilisateurs.forEach((u)=>{
         if(u.nom==utilisateur.nom && u.motPasse==utilisateur.motPasse){
           this.utilisateurConnecte=u.nom
@@ -34,7 +34,7 @@ export class AuthentificationComponent implements OnInit {
           this.estConnecte=true
           localStorage.setItem('estConnecte',String(this.estConnecte));
           localStorage.setItem('utilisateurConnecte',this.utilisateurConnecte);
-          this.authentificationService.loggedIn( u);
+          this.authentificationService.loggedIn(u);
          if (this.role=='admin'){
            this.authentificationService.isAdmin();}
          }
@@ -44,6 +44,10 @@ export class AuthentificationComponent implements OnInit {
         this.messageConnexion=true }
 
     else { console.log('erreur de connexion'); this.messageErreur=true}
+  }
+
+  deconnexion(){
+   this.authentificationService.logOut();
   }
 
 }

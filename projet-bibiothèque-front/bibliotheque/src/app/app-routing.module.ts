@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
+  {path:'home',component: HomeComponent},
   {path:'bibliotheque',component: BibliothequeComponent},
   {path:'gestionBibliotheque',component: GestionBibliothequeComponent},
   {path:'authentification',component: AuthentificationComponent},
