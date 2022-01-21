@@ -32,8 +32,6 @@ export class AuthentificationComponent implements OnInit {
           this.utilisateurConnecte=u.nom
           this.role=u.role
           this.estConnecte=true
-          localStorage.setItem('estConnecte',String(this.estConnecte));
-          localStorage.setItem('utilisateurConnecte',this.utilisateurConnecte);
           this.authentificationService.loggedIn(u);
          if (this.role=='admin'){
            this.authentificationService.isAdmin();}

@@ -22,7 +22,7 @@
         <a class="nav-link text-light" routerLink="authentification">Connexion</a>
       </li>
       <li class="nav-item mx-4" *ngIf="authentificationService.estConnecte">
-        <a class="nav-link text-light" routerLink="home">Déconnexion</a>
+        <a class="nav-link text-light" (click)="authentificationService.logOut()">Déconnexion</a>
       </li>
       <li class="nav-item mx-4">
         <a class="nav-link text-light" >{{authentificationService.nomUtilisateurConnecte}} </a>
