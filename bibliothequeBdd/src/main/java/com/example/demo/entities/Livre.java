@@ -1,5 +1,6 @@
 package com.example.demo.entities;
 import java.io.Serializable;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +11,13 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor //constructeur sans arguments
+@AllArgsConstructor //constructeur avec arguments
 @Entity
 @Table(name = "LIVRE")
 public class Livre implements Serializable{
@@ -27,60 +35,36 @@ public class Livre implements Serializable{
 	private Bibliotheque bibliotheque;
 
 	
-
-	public Livre(Long id, String titre, String description, int quantite, Bibliotheque bibliotheque) {
-		super();
-		this.id = id;
-		this.titre = titre;
-		this.description = description;
-		this.quantite=quantite;
-		this.bibliotheque = bibliotheque;
-	}
-
-	public Livre() {
-		super();
-	}
-    
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getTitre() {
-		return titre;
-	}
-
-	public void setTitre(String titre) {
-		this.titre = titre;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
-	 public int getQuantite() {
-		return quantite;
-	}
-
-	public void setQuantite(int quantite) {
-		this.quantite = quantite;
-	}
-
-	public Bibliotheque getBibliotheque() {
-			return bibliotheque;
-		}
-
-		public void setBibliotheque(Bibliotheque bibliotheque) {
-			this.bibliotheque = bibliotheque;
-		}
-
+	/*
+	 * public Livre(Long id, String titre, String description, int quantite,
+	 * Bibliotheque bibliotheque) { super(); this.id = id; this.titre = titre;
+	 * this.description = description; this.quantite=quantite; this.bibliotheque =
+	 * bibliotheque; }
+	 * 
+	 * public Livre() { super(); }
+	 * 
+	 * public Long getId() { return id; }
+	 * 
+	 * public void setId(Long id) { this.id = id; }
+	 * 
+	 * public String getTitre() { return titre; }
+	 * 
+	 * public void setTitre(String titre) { this.titre = titre; }
+	 * 
+	 * public String getDescription() { return description; }
+	 * 
+	 * public void setDescription(String description) { this.description =
+	 * description; }
+	 * 
+	 * public int getQuantite() { return quantite; }
+	 * 
+	 * public void setQuantite(int quantite) { this.quantite = quantite; }
+	 * 
+	 * public Bibliotheque getBibliotheque() { return bibliotheque; }
+	 * 
+	 * public void setBibliotheque(Bibliotheque bibliotheque) { this.bibliotheque =
+	 * bibliotheque; }
+	 */
 	
 
 }
