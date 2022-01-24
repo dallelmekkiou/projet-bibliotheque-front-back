@@ -30,6 +30,7 @@ import lombok.NoArgsConstructor;
 	    private String username;
 	    @Column(name="password")
 	    private String password;
+	    
 	   
 		/*
 		 * public User() { super(); } public User(Long id, String username, String
